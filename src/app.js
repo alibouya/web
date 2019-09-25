@@ -10,6 +10,7 @@ console.log(__dirname)
 console.log(path.join(__dirname,'../public'))
 
 const app =express()
+const port = process.env.PORT || 3000
 // define paths for express config
 const publicDirectory =path.join(__dirname,'../public')
 const viewsPath =path.join(__dirname,'../templates/views')
@@ -101,7 +102,7 @@ app.get('*', (req, res)=>{
         name : 'Ali Bouyahya',
         errorMessage: 'Page not found'
     })})
-app.listen(3000, ()=>{
+app.listen(port, ()=>{
     console.log('Server is up on server 3000.')
 })
 //app.com
